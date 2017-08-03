@@ -3,6 +3,8 @@
 <head>
 	<title>Login</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#333">
 	<style type="text/css">
 		html, body {
 			display: flex;
@@ -20,11 +22,14 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
-			height: 300px;
+			justify-content: space-around;
+			max-height: 300px;
 			max-width: 400px;
-			width: 100%;
+			width: 70%;
 			margin: 20px;
+			margin-right: 20px;
+			margin-left: 20px;
+			padding: 50px;
 			border-radius: 5px;
 			box-shadow: 0 0 100px rgba(100, 100, 100, 0.2);
 			background-color: #F0F0F0;
@@ -32,18 +37,19 @@
 		}
 		.logo {
 			width: 100px;
+			padding: 30px;
 			height: auto;
 		}
 		.text {
 			font-family: 'Open Sans';
 			font-weight: 300;
 			font-size: 20pt;
-			margin-top: 50px;
+			margin-top: 10px;
 			margin-bottom: 20px; 
 		}
 		.input {
 			font-family: 'Open Sans';
-			width: 80%;
+			width: 100%;
 			height: 30px;
 			padding: 10px;
 			border: none;
@@ -63,7 +69,7 @@
 			font-size: 15pt;
 			text-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
 			color: white;
-			width: calc(80% + 20px);
+			width: calc(100% + 20px);
 			border: none;
 			outline: none;
 			background-color: #CCC;
@@ -79,6 +85,20 @@
 			background-color: #34d058;
 			border-bottom: solid 0px #34d058;
 			transform: translateY(2px);
+		}
+		@media only screen and (max-height: 474px) {
+			.logo {
+				display: none;
+			}
+			.text {
+				margin-bottom: 0px;
+			}
+			.input {
+				margin-bottom: 5px;
+			}
+			.login-container {
+				margin-top: 15px;
+			}
 		}
 	</style>
 </head>
