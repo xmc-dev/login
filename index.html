@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<style type="text/css">
+		html, body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			background: url(pattern.svg);
+			background-size: cover;
+			z-index: 10;
+		}
+		.login-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 300px;
+			max-width: 400px;
+			width: 100%;
+			margin: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 100px rgba(100, 100, 100, 0.2);
+			background-color: #F0F0F0;
+			z-index: 20;
+		}
+		.logo {
+			width: 100px;
+			height: auto;
+		}
+		.text {
+			font-family: 'Open Sans';
+			font-weight: 300;
+			font-size: 20pt;
+			margin-top: 50px;
+			margin-bottom: 20px; 
+		}
+		.input {
+			font-family: 'Open Sans';
+			width: 80%;
+			height: 30px;
+			padding: 10px;
+			border: none;
+			outline: none;
+			border-radius: 5px;
+			border-bottom: solid 2px #c9c9c9;
+			margin-bottom: 25px;
+			transition: border 0.3s;
+		}
+		.input:focus {
+			border-bottom: solid 2px #969696;
+		}
+		.button {
+			font-family: 'Open Sans';
+			margin: 0;
+			height: 70px;
+			font-size: 15pt;
+			text-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+			color: white;
+			width: calc(80% + 20px);
+			border: none;
+			outline: none;
+			background-color: #CCC;
+			border-radius: 5px;
+			border-bottom: solid 2px #AAA;
+			transition: all 0.3s;
+		}
+		.button:hover {
+			background-color: #4EEA72;
+			border-bottom: solid 2px #34d058;
+		}
+		.button:active {
+			background-color: #34d058;
+			border-bottom: solid 0px #34d058;
+			transform: translateY(2px);
+		}
+	</style>
+</head>
+<body>
+<img class="logo" src="logo.svg">
+<div class="text">Please log in to continue</div>
+<form class="login-container" action="#" method="post">
+<input type="name" name="username" placeholder="Username" class="input">
+<input type="password" name="password" placeholder="Password" class="input">
+<input type="submit" name="submit" value="SUBMIT" class="button">
+</form>
+</body>
+</html>
