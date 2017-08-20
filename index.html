@@ -1,134 +1,134 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Login</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-	<meta name=viewport content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#333">
-	<style type="text/css">
-		html, body {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin: 0;
-			height: 100%;
-			width: 100%;
-			background: url(pattern.svg);
-			background-size: cover;
-			z-index: -2;
-		}
-		body.red:after {
-			content: "";
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: linear-gradient(to bottom right, #3DE13D, #91cded);
-			opacity: 0.3;
-			z-index: -1;
-			mix-blend-mode: multiply;
-		}
-		.logo {
-			position: absolute;
-			width: 100px;
-			top: -150px;
-			height: auto;
-		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-		}
-		.login-container {
-			width: 100%;
-			max-width: 400px;
-			box-sizing: border-box;
-			padding: 0 10px 0 10px;
-		}
-		.text {
-			position: absolute;
-			font-family: 'Open Sans';
-			color: #333;
-			font-weight: 300;
-			font-size: 20pt;
-			top: -75px;
-		}
-		.input {
-			font-family: 'Open Sans';
-			width: 100%;
-			height: 50px;
-			padding: 0 20px;
-			opacity: 0.8;
-			border: none;
-			outline: none;
-			box-sizing: border-box;
-			background-color: #FFF;
-			color: #333;
-			border-radius: 5px;
-			border-bottom: solid 4px #c9c9c9;
-			margin-bottom: 25px;
-			transition: all 0.3s;
-		}
-		.input:hover {
-			opacity: 1;
-		}
-		.input:focus {
-			opacity: 1;
-			border-bottom: solid 4px #969696;
-		}
-		.button {
-			font-family: 'Open Sans';
-			margin: 0;
-			height: 70px;
-			font-size: 15pt;
-			text-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
-			color: #FFF;
-			width: 100%;
-			opacity: 0.8;
-			border: none;
-			outline: none;
-			box-sizing: border-box;
-			background-color: #CCC;
-			border-radius: 5px;
-			border-bottom: solid 4px #AAA;
-			transition: all 0.2s;
-		}
-		.button:hover {
-			background-color: #66CC99;
-			border-bottom: solid 4px #49AB7A;
-		}
-		.button:active {
-			background-color: #49AB7A;
-			border-bottom: solid 0px #49AB7A;
-			transform: translateY(2px);
-		}
-		@media only screen and (max-height: 474px) {
-			.logo {
-				display: none;
-			}
-		}
-	</style>
-</head>
-<body class="">
-<div class="container">
-	<img class="logo" src="logo.svg">
-	<div class="text">Please log in to continue</div>
-	<form class="login-container" method="post">
-		<input type="name" name="username" placeholder="Username" class="input">
-		<input type="password" name="password" placeholder="Password" class="input">
-		<input type="text" name="redirect_uri" id="redirect_uri" style="display: none;">
-		<input type="submit" name="submit" value="SUBMIT" class="button">
-	</form>
-</div>
-<script>
- (function() {
-	 var redirURI = document.getElementById('redirect_uri');
-	 redirURI.value = window.location.hash.split('#')[1];
-})();
-</script>
-</body>
+	<head>
+		<title>Login</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<meta name=viewport content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#333">
+		<style type="text/css">
+		 html, body {
+			 display: flex;
+			 flex-direction: column;
+			 justify-content: center;
+			 align-items: center;
+			 margin: 0;
+			 height: 100%;
+			 width: 100%;
+			 background: url(pattern.svg);
+			 background-size: cover;
+			 z-index: -2;
+		 }
+		 body.red:after {
+			 content: "";
+			 position: absolute;
+			 top: 0;
+			 bottom: 0;
+			 left: 0;
+			 right: 0;
+			 background: linear-gradient(to bottom right, #3DE13D, #91cded);
+			 opacity: 0.3;
+			 z-index: -1;
+			 mix-blend-mode: multiply;
+		 }
+		 .logo {
+			 position: absolute;
+			 width: 100px;
+			 top: -150px;
+			 height: auto;
+		 }
+		 .container {
+			 display: flex;
+			 flex-direction: column;
+			 align-items: center;
+			 justify-content: center;
+			 position: relative;
+		 }
+		 .login-container {
+			 width: 100%;
+			 max-width: 400px;
+			 box-sizing: border-box;
+			 padding: 0 10px 0 10px;
+		 }
+		 .text {
+			 position: absolute;
+			 font-family: 'Open Sans';
+			 color: #333;
+			 font-weight: 300;
+			 font-size: 20pt;
+			 top: -75px;
+		 }
+		 .input {
+			 font-family: 'Open Sans';
+			 width: 100%;
+			 height: 50px;
+			 padding: 0 20px;
+			 opacity: 0.8;
+			 border: none;
+			 outline: none;
+			 box-sizing: border-box;
+			 background-color: #FFF;
+			 color: #333;
+			 border-radius: 5px;
+			 border-bottom: solid 4px #c9c9c9;
+			 margin-bottom: 25px;
+			 transition: all 0.3s;
+		 }
+		 .input:hover {
+			 opacity: 1;
+		 }
+		 .input:focus {
+			 opacity: 1;
+			 border-bottom: solid 4px #969696;
+		 }
+		 .button {
+			 font-family: 'Open Sans';
+			 margin: 0;
+			 height: 70px;
+			 font-size: 15pt;
+			 text-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+			 color: #FFF;
+			 width: 100%;
+			 opacity: 0.8;
+			 border: none;
+			 outline: none;
+			 box-sizing: border-box;
+			 background-color: #CCC;
+			 border-radius: 5px;
+			 border-bottom: solid 4px #AAA;
+			 transition: all 0.2s;
+		 }
+		 .button:hover {
+			 background-color: #66CC99;
+			 border-bottom: solid 4px #49AB7A;
+		 }
+		 .button:active {
+			 background-color: #49AB7A;
+			 border-bottom: solid 0px #49AB7A;
+			 transform: translateY(2px);
+		 }
+		 @media only screen and (max-height: 474px) {
+			 .logo {
+				 display: none;
+			 }
+		 }
+		</style>
+	</head>
+	<body class="">
+		<div class="container">
+			<img class="logo" src="logo.svg">
+			<div class="text">Please log in to continue</div>
+			<form class="login-container" method="post">
+				<input type="name" name="username" placeholder="Username" class="input">
+				<input type="password" name="password" placeholder="Password" class="input">
+				<input type="text" name="redirect_uri" id="redirect_uri" style="display: none;">
+				<input type="submit" name="submit" value="SUBMIT" class="button">
+			</form>
+		</div>
+		<script>
+		 (function() {
+			 var redirURI = document.getElementById('redirect_uri');
+			 redirURI.value = window.location.hash.split('#')[1];
+		 })();
+		</script>
+	</body>
 </html>
