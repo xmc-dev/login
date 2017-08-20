@@ -128,6 +128,9 @@
 		 (function() {
 			 var redirURI = document.getElementById('redirect_uri');
 			 redirURI.value = window.location.hash.split('#')[1];
+			 if (redirURI.value == undefined || redirURI.value == null) {
+				 redirURI.value = "/";
+			 }
 		 })();
 		</script>
 	</body>
