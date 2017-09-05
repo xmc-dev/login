@@ -132,7 +132,7 @@
 						   .split('&')[0]
 						   .split('=')[1];
 			 if (rdr) {
-				 redirURI.value = rdr;
+				 redirURI.value = decodeURIComponent(rdr);
 			 } else {
 				 redirURI.value = "/";
 			 }
