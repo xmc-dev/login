@@ -127,11 +127,15 @@
 		<script>
 		 (function() {
 			 var redirURI = document.getElementById('redirect_uri');
-			 var h = window.location.hash.split('#')[1];
-			 if (h == undefined || h == null) {
-				 h = "/";
+			 var hash = window.location.hash.substr(1);
+			 var rdr = hash.substr(hash.indexOf('redirect_uri='))
+						   .split('&')[0]
+						   .split('=')[1];
+			 if (rdr) {
+				 redirURI.value = rdr;
+			 } else {
+				 redirURI.value = "/";
 			 }
-			 redirURI.value = h;
 		 })();
 		</script>
 	</body>
