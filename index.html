@@ -120,23 +120,9 @@
 			<form class="login-container" method="post">
 				<input type="name" name="username" placeholder="Username" class="input">
 				<input type="password" name="password" placeholder="Password" class="input">
-				<input type="text" name="redirect_uri" id="redirect_uri" style="display: none;">
+				<input type="text" name="redirect_uri" id="redirect_uri" style="display: none;" value="{{.RedirectURI}}">
 				<input type="submit" name="submit" value="SUBMIT" class="button">
 			</form>
 		</div>
-		<script>
-		 (function() {
-			 var redirURI = document.getElementById('redirect_uri');
-			 var hash = window.location.hash.substr(1);
-			 var rdr = hash.substr(hash.indexOf('redirect_uri='))
-						   .split('&')[0]
-						   .split('=')[1];
-			 if (rdr) {
-				 redirURI.value = decodeURIComponent(rdr);
-			 } else {
-				 redirURI.value = "/";
-			 }
-		 })();
-		</script>
 	</body>
 </html>
