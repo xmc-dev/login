@@ -117,8 +117,8 @@
 		<div class="container">
 			<img class="logo" src="logo.svg">
 			<div class="text">Please log in to continue</div>
-			<form class="login-container" method="post">
-				<input type="name" name="username" placeholder="Username" class="input">
+			<form class="login-container" method="post" action="../login">
+				<input type="name" name="username" placeholder="Username" class="input" autofocus>
 				<input type="password" name="password" placeholder="Password" class="input">
 				<input type="text" name="redirect_uri" id="redirect_uri" style="display: none;" value="{{.RedirectURI}}">
 				<input type="submit" name="submit" value="SUBMIT" class="button">
