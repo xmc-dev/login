@@ -4,7 +4,7 @@
 	<title>Login</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<meta name=viewport content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#333">
+	<meta name="theme-color" content="#239572">
 	<style type="text/css">
 		html, body {
 			display: flex;
@@ -14,7 +14,6 @@
 			margin: 0;
 			height: 100%;
 			width: 100%;
-			//font-size: 24px;
 			background: #239572;
 			z-index: -2;
 		}
@@ -42,7 +41,7 @@
 			filter: drop-shadow(0px 3px 16px #00000022);
 			z-index: 1;
 		}
-		.logo-wrapper b {
+		.logo-wrapper strong {
 			display: block;
 			position: absolute;
 			bottom: -1.5rem;
@@ -113,10 +112,10 @@
 	</style>
 </head>
 <body class="">
-	<div class="logo-wrapper"><img class="logo" src="logo.svg"><b>Sign in</b></div>
+	<div class="logo-wrapper"><img class="logo" src="logo.svg" alt="XMC Logo"><strong>Sign in</strong></div>
 	<form class="login-container" method="post" action="../login">
-		<input name="username" autocomplete="username" spellcheck= "false" autocapitalize="off" tabindex="1" data-initial-value="" placeholder="Username" class="login-input" autofocus required>
-		<input type="password" name="password" autocomplete="current-password" spellcheck="false" autocapitalize="off" tabindex="2" aria-label="Password" name="password" autocorrect="off" data-initial-value="" placeholder="Password" class="login-input" required>
+		<input type="text" name="username" autocomplete="username" spellcheck= "false" autocapitalize="off" tabindex="1" data-initial-value="" placeholder="Username" class="login-input" autofocus required>
+		<input type="password" name="password" autocomplete="current-password" spellcheck="false" autocapitalize="off" tabindex="2" aria-label="Password" autocorrect="off" data-initial-value="" placeholder="Password" class="login-input" required>
 		<input type="text" name="redirect_uri" id="redirect_uri" style="display: none;" value="{{.RedirectURI}}">
 		<input type="submit" name="submit" value="Sign in" tabindex="3" class="submit-button">
 	</form>
